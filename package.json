@@ -1,0 +1,25 @@
+{
+  "name": "angular-1.5.x-tutorial",
+  "version": "1.0.0",
+  "description": "A tutorial for angular 1.5.x",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adityasharat/angular-1.5.x-tutorial.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "adityasharat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adityasharat/angular-1.5.x-tutorial/issues"
+  },
+  "homepage": "https://github.com/adityasharat/angular-1.5.x-tutorial#readme",
+  "dependencies": {
+    "angular": "^1.5.11"
+  }
+}
