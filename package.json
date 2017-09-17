@@ -19,7 +19,5 @@
     "url": "https://github.com/adityasharat/angular-1.5.x-tutorial/issues"
   },
   "homepage": "https://github.com/adityasharat/angular-1.5.x-tutorial#readme",
-  "dependencies": {
-    "angular": "^1.5.11"
-  }
+  "dependencies": {}
 }
