@@ -2,8 +2,9 @@ import angular from 'angular';
 import '../../style/app.css';
 
 class MainController {
-  constructor() {
-    this.todos = [];
+  constructor(TodoService) {
+    TodoService.$create('Lorem Ipsum', 'some description required');
+    this.todos = TodoService.$get();
   }
 }
 
@@ -19,7 +20,7 @@ let TodoService = () => {
   const todos = {};
 
   function $create(title, description) {
-    todos[Object.keys().length] = new Todo(title, description);
+    todos[Object.keys(todos).length] = new Todo(title, description);
     return service;
   }
 
@@ -29,7 +30,7 @@ let TodoService = () => {
   }
 
   function $get(id) {
-    return id ? todos : todo.id;
+    return id ? todo[id]: todos;
   }
 
   function $update(todo) {
@@ -60,7 +61,7 @@ const MODULE_NAME = 'todo';
 
 angular.module(MODULE_NAME, ['todo'])
   .directive('todo', todo)
-  .controller('MainController', MainController)
+  .controller('MainController', ['TodoService', MainController])
   .factory('TodoService', TodoService);
 
 export default MODULE_NAME;
