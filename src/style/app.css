@@ -1,0 +1,15 @@
+/* styles in src/style directory are applied to the whole page */
+body {
+  background: #1e1e1e;
+  color: #ccc;
+}
+
+a {
+  color: #03A9F4;
+}
+
+main {
+  padding: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 50px;
+}
