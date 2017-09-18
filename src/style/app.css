@@ -75,5 +75,5 @@ main {
 }
 
 .td-create-container {
-
+  display: flex;
 }
