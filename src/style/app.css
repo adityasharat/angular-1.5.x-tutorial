@@ -36,7 +36,8 @@ main {
 }
 
 .td-list-item-title {
-
+  margin: 0.5em 0;
+  color: #cceecc;
 }
 
 .td-list-item-description {
