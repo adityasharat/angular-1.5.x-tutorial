@@ -30,7 +30,9 @@ main {
 }
 
 .td-list-item {
-
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
 }
 
 .td-list-item-title {
