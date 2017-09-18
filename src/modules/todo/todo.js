@@ -1,6 +1,10 @@
 import angular from 'angular';
 import '../../style/app.css';
 
+const STATE_DELETED = -1;
+const STATE_DEFAULT = 0;
+const STATE_DONE = 1;
+
 class MainController {
   constructor(TodoService) {
     TodoService.$create('Lorem Ipsum', 'some description required');
@@ -12,6 +16,8 @@ class Todo {
   constructor(title, description) {
     this.title = title;
     this.description = description;
+    this.createdOn = new Date().valueOf();
+    this.state = STATE_DEFAULT;
   }
 }
 
