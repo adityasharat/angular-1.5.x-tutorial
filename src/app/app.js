@@ -1,6 +1,7 @@
 import angular from 'angular';
 import todo from '../modules/todo/todo.js';
 
+import '../style/fa/css/font-awesome.min.css';
 import '../style/app.css';
 
 let app = () => {
