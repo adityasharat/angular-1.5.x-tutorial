@@ -1,5 +1,4 @@
 import angular from 'angular';
-import '../../style/app.css';
 
 const STATE_DELETED = -1;
 const STATE_DEFAULT = 0;
