@@ -9,8 +9,11 @@
         <p class="td-list-item-description">{{ todo.description | limitTo : 80 }}<span ng-if="todo.description.length > 80">...</span></p>
         <footer class="td-list-item-footer">
           <time class="td-list-item-createdon">{{ todo.createdOn | date }}</time>
-          <button class="td-list-item-delete">
+          <button class="td-list-item-action delete">
             <i class="fa fa-trash-o" ng-click="main.delete(todo.id)"></i>
+          </button>
+          <button class="td-list-item-action edit">
+            <i class="fa fa-pencil" ng-click="main.edit(todo.id)"></i>
           </button>
         </footer>
       </li>
