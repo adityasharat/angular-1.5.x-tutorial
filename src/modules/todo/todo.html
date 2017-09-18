@@ -8,7 +8,7 @@
         <h3 class="td-list-item-title">{{ todo.title }}</h3>
         <p class="td-list-item-description">{{ todo.description }}</p>
         <footer class="td-list-item-footer">
-          <span class="td-list-item-createdon">{{ todo.createdOn | date }}</span>
+          <time class="td-list-item-createdon">{{ todo.createdOn | date }}</time>
           <button class="td-list-item-delete">
             <i class="fa fa-trash-o" ng-click="main.delete(todo.id)"></i>
           </button>
