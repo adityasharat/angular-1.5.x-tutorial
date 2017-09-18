@@ -7,6 +7,10 @@ const STATE_DONE = 1;
 class MainController {
   constructor(TodoService) {
     TodoService.$create('Lorem Ipsum', new Array(10).join('some description required '));
+    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required '));
+    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required '));
+    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required '));
+    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required '));
     this.todos = TodoService.$get();
   }
 }
