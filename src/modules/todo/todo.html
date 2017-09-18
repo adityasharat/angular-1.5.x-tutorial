@@ -1,9 +1,16 @@
 <main>
-  <h1>Todo Application</h1>
-  <ul>
-    <li ng-repeat="(key, todo) in main.todos">
-      <h3>{{todo.title}}</h3>
-      <p>{{todo.description}}</p>
-    </li>
-  </ul>
+
+  <h1 class="td-app-title">Todo Application</h1>
+
+  <section class="td-list-container">
+    <ul class="td-list">
+      <li class="td-list-item" ng-repeat="(key, todo) in main.todos">
+        <h3 class="td-list-item-title">{{todo.title}}</h3>
+        <p class="td-list-item-description">{{todo.description}}</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="todo-create-container"></section>
+
 </main>
