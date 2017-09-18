@@ -41,7 +41,8 @@ main {
 }
 
 .td-list-item-description {
-
+  margin: 0;
+  padding: 0 0.5em;
 }
 
 .td-create-container {
