@@ -46,7 +46,8 @@ main {
 }
 
 .td-list-item-footer {
-
+  display: flex;
+  margin: 0.5em;
 }
 
 .td-list-item-createdon {
