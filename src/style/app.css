@@ -19,11 +19,15 @@ main {
 }
 
 .td-list-container {
+  width: 100%;
   display: flex;
   padding: 1em;
 }
 
 .td-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -31,9 +35,11 @@ main {
 
 .td-list-item {
   display: flex;
-  max-width: 300px;
+  max-width: 25%;
   flex-direction: column;
   padding: 0.5em;
+  flex: 1 0 20%;
+  margin: 0.5em;
 }
 
 .td-list-item-title {
