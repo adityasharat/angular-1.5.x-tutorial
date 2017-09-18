@@ -46,13 +46,15 @@ main {
 }
 
 .td-list-item-footer {
+  align-items: baseline;
+  justify-content: flex-end;
   display: flex;
   margin: 0.5em;
-  justify-content: flex-end;
 }
 
 .td-list-item-createdon {
-
+  font-size: 0.8em;
+  color: #6b676b;
 }
 
 .td-list-item-delete  {
