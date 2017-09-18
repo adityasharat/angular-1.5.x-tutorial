@@ -14,7 +14,8 @@ main {
 }
 
 .td-app-title {
-
+  text-align: center;
+  color: #eee;
 }
 
 .td-list-container {
