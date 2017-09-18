@@ -1,4 +1,4 @@
-(function (angular, $) {
+;(function (angular, $) {
 
   const TodoApplication = angular.module('TodoApplication', []);
 
