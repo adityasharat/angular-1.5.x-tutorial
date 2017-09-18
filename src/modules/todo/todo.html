@@ -5,8 +5,14 @@
   <section class="td-list-container">
     <ul class="td-list">
       <li class="td-list-item" ng-repeat="(key, todo) in main.todos">
-        <h3 class="td-list-item-title">{{todo.title}}</h3>
-        <p class="td-list-item-description">{{todo.description}}</p>
+        <h3 class="td-list-item-title">{{ todo.title }}</h3>
+        <p class="td-list-item-description">{{ todo.description }}</p>
+        <footer class="td-list-item-footer">
+          <span class="td-list-item-createdon">{{ todo.createdOn | date }}</span>
+          <button class="td-list-item-delete">
+            <i class="fa fa-trash-o" ng-click="main.delete(todo.id)"></i>
+          </button>
+        </footer>
       </li>
     </ul>
   </section>
