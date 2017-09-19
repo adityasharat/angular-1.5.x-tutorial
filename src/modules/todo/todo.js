@@ -23,6 +23,13 @@ class MainController {
     this.delete = (id) => {
       TodoService.$delete(id);
     };
+
+    this.add = () => {
+      TodoService.$add({
+        title: '<title>',
+        description: '<description>'
+      });
+    }
   }
 }
 
