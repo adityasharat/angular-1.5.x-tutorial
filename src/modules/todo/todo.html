@@ -5,17 +5,27 @@
   <section class="td-list-container">
     <ul class="td-list">
       <li class="td-list-item" ng-repeat="(key, todo) in main.todos">
-        <h3 class="td-list-item-title">{{ todo.title }}</h3>
-        <p class="td-list-item-description">{{ todo.description | limitTo : 80 }}<span ng-if="todo.description.length > 80">...</span></p>
+
+        <h3 class="td-list-item-title">
+          <span  ng-if="!main.editor[todo.id]">{{ todo.title }}</span>
+          <input type="text" ng-model="todo.title" ng-if="main.editor[todo.id]"/>
+        </h3>
+
+        <p class="td-list-item-description" ng-if="!main.editor[todo.id]">
+          {{ todo.description | limitTo : 80 }}<span ng-if="todo.description.length > 80">...</span>
+        </p>
+        <textarea ng-model="todo.description" ng-if="main.editor[todo.id]" class="td-list-item-description"></textarea>
+
         <footer class="td-list-item-footer">
           <time class="td-list-item-createdon">{{ todo.createdOn | date }}</time>
           <button class="td-list-item-action delete">
             <i class="fa fa-trash-o" ng-click="main.delete(todo.id)"></i>
           </button>
           <button class="td-list-item-action edit">
-            <i class="fa fa-pencil" ng-click="main.edit(todo.id)"></i>
+            <i class="fa fa-pencil" ng-click="main.editor[todo.id] = true"></i>
           </button>
         </footer>
+
       </li>
     </ul>
   </section>

@@ -6,22 +6,25 @@ const STATE_DONE = 1;
 
 class MainController {
   constructor(TodoService) {
-    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required '));
-    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required '));
-    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required '));
-    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required '));
-    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required '));
-    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required '));
-    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required '));
-    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required '));
-    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required '));
-    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required '));
+    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required 1 '));
+    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required 2 '));
+    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required 3 '));
+    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required 4 '));
+    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required 5 '));
+    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required 6 '));
+    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required 7 '));
+    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required 8 '));
+    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required 9 '));
+    TodoService.$create('Lorem Ipsum', new Array(10).join('some description required 0 '));
     this.todos = TodoService.$get();
+
+    console.log(this.todos);
   }
 }
 
 class Todo {
-  constructor(title, description) {
+  constructor(id, title, description) {
+    this.id = id;
     this.title = title;
     this.description = description;
     this.createdOn = new Date().valueOf();
@@ -34,7 +37,7 @@ let TodoService = () => {
   const todos = {};
 
   function $create(title, description) {
-    todos[Object.keys(todos).length] = new Todo(title, description);
+    todos[Object.keys(todos).length] = new Todo(Object.keys(todos).length, title, description);
     return service;
   }
 
