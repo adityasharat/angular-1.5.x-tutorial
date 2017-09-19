@@ -101,6 +101,7 @@ main {
   align-items: center;
   flex: none;
   width: 10rem;
+  min-height: 120px;
 }
 
 .td-list-item.add i {
