@@ -21,9 +21,12 @@
           <button class="td-list-item-action delete">
             <i class="fa fa-trash-o" ng-click="main.delete(todo.id)"></i>
           </button>
-          <button class="td-list-item-action edit">
+          <button class="td-list-item-action edit" ng-if="!main.editor[todo.id]">
             <i class="fa fa-pencil" ng-click="main.editor[todo.id] = true"></i>
           </button>
+          <button class="td-list-item-action save" ng-if="main.editor[todo.id]">
+              <i class="fa fa-save" ng-click="main.editor[todo.id] = false"></i>
+            </button>
         </footer>
 
       </li>

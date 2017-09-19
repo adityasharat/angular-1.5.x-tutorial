@@ -6,6 +6,7 @@ const STATE_DONE = 1;
 
 class MainController {
   constructor(TodoService) {
+
     TodoService.$create('Lorem Ipsum', new Array(10).join('some description required 1 '));
     TodoService.$create('Lorem Ipsum', new Array(10).join('some description required 2 '));
     TodoService.$create('Lorem Ipsum', new Array(10).join('some description required 3 '));
@@ -16,9 +17,12 @@ class MainController {
     TodoService.$create('Lorem Ipsum', new Array(10).join('some description required 8 '));
     TodoService.$create('Lorem Ipsum', new Array(10).join('some description required 9 '));
     TodoService.$create('Lorem Ipsum', new Array(10).join('some description required 0 '));
+
     this.todos = TodoService.$get();
 
-    console.log(this.todos);
+    this.delete = (id) => {
+      TodoService.$delete(id);
+    };
   }
 }
 

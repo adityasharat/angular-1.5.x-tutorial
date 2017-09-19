@@ -88,6 +88,10 @@ main {
   color: #cfc;
 }
 
+.td-list-item-action.save  {
+  color: #cfc;
+}
+
 .td-create-container {
   display: flex;
 }
