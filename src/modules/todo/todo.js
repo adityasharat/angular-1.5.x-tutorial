@@ -25,10 +25,7 @@ class MainController {
     };
 
     this.add = () => {
-      TodoService.$add({
-        title: '<title>',
-        description: '<description>'
-      });
+      TodoService.$create('<title>','<description>');
     }
   }
 }
