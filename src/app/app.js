@@ -1,5 +1,5 @@
 import angular from 'angular';
-import todo from '../modules/todo/todo.js';
+import todo from '../modules/classroom/classroom';
 
 import '../style/fa/css/font-awesome.min.css';
 import '../style/app.css';
@@ -20,7 +20,7 @@ class AppCtrl {
 
 const MODULE_NAME = 'app';
 
-angular.module(MODULE_NAME, ['todo'])
+angular.module(MODULE_NAME, ['classroom'])
   .directive('app', app)
   .controller('AppCtrl', AppCtrl);
 
