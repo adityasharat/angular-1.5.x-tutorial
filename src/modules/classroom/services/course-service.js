@@ -21,8 +21,11 @@ let CourseService = () => {
 
   const courses = {};
 
-  function $create(title, description, lessons) {
-    courses[Object.keys(courses).length] = new Course(Object.keys(courses).length, title, description, lessons);
+  function $create(id, title, description, lessons) {
+    if (courses[id]) {
+      throw new Error(`Course with ${id} already exists.`);
+    }
+    courses[id] = new Course(id, title, description, lessons);
     return service;
   }
 
