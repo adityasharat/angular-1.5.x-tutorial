@@ -3,7 +3,7 @@ import { CourseService } from './services/course-service'
 
 class MainController {
   constructor(CourseService) {
-    console.log(CourseService);
+
   }
 }
 
