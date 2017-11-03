@@ -6,6 +6,8 @@ import '../style/app.css';
 
 let app = () => {
   return {
+    restrict: 'E',
+    replace: true,
     template: require('./app.html'),
     controller: 'AppCtrl',
     controllerAs: 'app'
